@@ -1,0 +1,11 @@
+{
+	"name": "New Tab",
+	"version": "1.0",
+	"description": "Open link in new tab",
+	"permissions": ["storage"],
+	"background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+	"manifest_version": 2
+ }
