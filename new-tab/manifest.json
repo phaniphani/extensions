@@ -2,10 +2,15 @@
 	"name": "New Tab",
 	"version": "1.0",
 	"description": "Open link in new tab",
-	"permissions": ["storage"],
-	"background": {
-      "scripts": ["background.js"],
-      "persistent": false
+	"permissions": ["tabs", "<all_urls>", "storage"],
+    "browser_action": {
+    	"default_title": "Print Dom"
     },
+    "content_scripts": [
+    	{
+    		"matches": ["<all_urls>"],
+    		"js": ["modifydom.js"]
+    	}
+    ],
 	"manifest_version": 2
  }
